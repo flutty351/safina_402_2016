@@ -1,0 +1,4 @@
+2016-03-02 23:12:54 INFO  ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4aa65618: startup date [Wed Mar 02 23:12:54 MSK 2016]; root of context hierarchy
+2016-03-02 23:12:54 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-03-02 23:12:55 INFO  ItemsDaoFileBasedImpl:53 - The qwe with a price of 1.0 was found.
+2016-03-02 23:12:55 INFO  ItemsDaoFileBasedImpl:42 - Item has been deleted.
