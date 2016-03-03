@@ -5,11 +5,11 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="itemsDao"
-          class="store.dao.ItemsDaoCSVBasedImpl">
-        <constructor-arg value="/home/aliya/IdeaProjects/Store1/src/main/resources/in.txt"/>
+          class="ru.itis.inform.store.dao.ItemsDaoCSVBasedImpl">
+        <constructor-arg value="/home/aliya/IdeaProjects/reps/Store/src/main/resources/in.txt"/>
     </bean>
-    <bean id="buy"
-          class="store.services.StoreServiceImpl">
+    <bean id="StoreService"
+          class="ru.itis.inform.store.services.StoreServiceImpl">
         <constructor-arg ref="itemsDao"/>
     </bean>
 </beans>

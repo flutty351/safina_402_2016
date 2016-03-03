@@ -1,18 +1,20 @@
-package store;
+package ru.itis.inform.store;
 
-import store.dao.ItemsDaoFileBasedImpl;
-import store.dao.models.Item;
-import store.services.StoreService;
-import store.services.StoreServiceImpl;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import ru.itis.inform.store.services.StoreService;
+
 
 import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        StoreService ss = new StoreServiceImpl(new ItemsDaoFileBasedImpl("/home/aliya/IdeaProjects/Store1/src/main/java/store/in.txt"));
-        ss.buy("item1");
-        System.out.println(ss.isExist("it"));
-        System.out.println(ss.isExist("item1"));
-        System.out.println(ss.isExist("item2"));
+
+        ApplicationContext context =
+                new ClassPathXmlApplicationContext("app-context.xml");
+
+        StoreService storeService = context.getBean("StoreService", StoreService.class);
+
+        storeService.buy("qwe");
     }
 }
