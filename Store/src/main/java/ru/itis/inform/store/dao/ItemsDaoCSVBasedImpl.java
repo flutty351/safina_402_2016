@@ -16,6 +16,7 @@ public class ItemsDaoCSVBasedImpl implements ItemsDao {
     BufferedReader bufferedReader;
     ArrayList<Item> items;
 
+
     public ItemsDaoCSVBasedImpl(String filePath) throws IOException {
 
         items = new ArrayList<Item>();

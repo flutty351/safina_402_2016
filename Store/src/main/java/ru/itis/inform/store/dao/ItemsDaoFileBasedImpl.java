@@ -17,6 +17,7 @@ public class ItemsDaoFileBasedImpl implements ItemsDao {
     BufferedReader bufferedReader;
     ArrayList<Item> items;
 
+
     public ItemsDaoFileBasedImpl(String filePath) throws IOException {
         items = new ArrayList<>();
         bufferedReader = new BufferedReader(new FileReader(filePath));

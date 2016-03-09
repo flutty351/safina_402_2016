@@ -11,12 +11,13 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 
-public class ItemsDaoTSVBasedImpl {
+public class ItemsDaoTSVBasedImpl implements ItemsDao{
 
     private static Logger log = Logger.getLogger(ItemsDaoFileBasedImpl.class.getName());
 
     BufferedReader bufferedReader;
     ArrayList<Item> items;
+
 
     public ItemsDaoTSVBasedImpl(String filePath) throws IOException {
         items = new ArrayList<Item>();
@@ -27,9 +28,8 @@ public class ItemsDaoTSVBasedImpl {
             bufferedReader = new BufferedReader(new FileReader(filePath));
             while ((line = bufferedReader.readLine()) != null) {
 
-                itemNames = line.split("\\s*\\t\\s*");
-
-                items.add(new Item(itemNames[1], Double.parseDouble(itemNames[2])));
+                itemNames = line.split("\\t");
+                items.add(new Item(itemNames[0], Double.parseDouble(itemNames[1])));
             }
         } catch (Exception e) {
             throw new IllegalArgumentException(e);

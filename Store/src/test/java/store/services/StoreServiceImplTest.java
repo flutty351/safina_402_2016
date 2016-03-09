@@ -1,13 +1,16 @@
 package store.services;
 
-import store.dao.ItemsDao;
+import ru.itis.inform.store.dao.ItemsDao;
+import ru.itis.inform.store.dao.models.Item;
+import ru.itis.inform.store.services.StoreServiceImpl;
+
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
-import store.dao.models.Item;
+
 
 import static org.junit.Assert.*;
 import static org.mockito.Matchers.any;

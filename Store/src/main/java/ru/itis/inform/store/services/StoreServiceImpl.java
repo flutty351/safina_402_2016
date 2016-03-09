@@ -5,7 +5,8 @@ import ru.itis.inform.store.dao.ItemsDao;
 
 public class StoreServiceImpl implements StoreService {
 
-    ItemsDao itemsDao;
+    private ItemsDao itemsDao;
+
 
     public StoreServiceImpl(ItemsDao itemsDao) {
         this.itemsDao = itemsDao;
