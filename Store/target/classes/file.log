@@ -1,3 +1,0 @@
-2016-03-10 00:14:24 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7f5db23e: startup date [Thu Mar 10 00:14:24 MSK 2016]; root of context hierarchy
-2016-03-10 00:14:24 INFO  ItemsDaoFileBasedImpl:54 - The qwe with a price of 1.0 was found.
-2016-03-10 00:14:24 INFO  ItemsDaoFileBasedImpl:43 - Item has been deleted.
