@@ -35,7 +35,7 @@ public class StoreServiceImplTest {
 
         when(itemsDao.select("Tovar")).thenReturn(new Item("Tovar", 10));
 
-        testedStoreService = new StoreServiceImpl(itemsDao);
+        testedStoreService = new StoreServiceImpl();
 
     }
 

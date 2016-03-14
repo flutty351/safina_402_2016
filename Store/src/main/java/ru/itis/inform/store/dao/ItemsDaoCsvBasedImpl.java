@@ -2,6 +2,7 @@ package ru.itis.inform.store.dao;
 
 
 import org.apache.log4j.Logger;
+import org.springframework.stereotype.Component;
 import ru.itis.inform.store.dao.models.Item;
 
 import java.io.BufferedReader;
@@ -10,14 +11,17 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class ItemsDaoCSVBasedImpl implements ItemsDao {
+
+@Component
+public class ItemsDaoCsvBasedImpl implements ItemsDao {
     private static Logger log = Logger.getLogger(ItemsDaoFileBasedImpl.class.getName());
 
     BufferedReader bufferedReader;
     ArrayList<Item> items;
+    String filePath = "/home/aliya/IdeaProjects/reps/Store/src/main/resources/inputData/in.csv";
 
 
-    public ItemsDaoCSVBasedImpl(String filePath) throws IOException {
+    public ItemsDaoCsvBasedImpl() throws IOException {
 
         items = new ArrayList<Item>();
         try {

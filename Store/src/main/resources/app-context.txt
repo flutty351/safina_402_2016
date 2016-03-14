@@ -5,7 +5,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="itemsDao"
-          class="ru.itis.inform.store.dao.ItemsDaoCSVBasedImpl">
+          class="ru.itis.inform.store.dao.ItemsDaoCsvBasedImpl">
         <constructor-arg value="/home/aliya/IdeaProjects/reps/Store/src/main/resources/in.txt"/>
     </bean>
     <bean id="StoreService"

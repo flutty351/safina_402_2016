@@ -1,6 +1,7 @@
 package ru.itis.inform.store.dao;
 
 import org.apache.log4j.Logger;
+import org.springframework.stereotype.Component;
 import ru.itis.inform.store.dao.models.Item;
 
 
@@ -11,15 +12,17 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 
-public class ItemsDaoTSVBasedImpl implements ItemsDao{
+@Component
+public class ItemsDaoTsvBasedImpl implements ItemsDao{
 
     private static Logger log = Logger.getLogger(ItemsDaoFileBasedImpl.class.getName());
 
     BufferedReader bufferedReader;
     ArrayList<Item> items;
+    String filePath = "/home/aliya/IdeaProjects/reps/Store/src/main/resources/inputData/in.tsv";
 
 
-    public ItemsDaoTSVBasedImpl(String filePath) throws IOException {
+    public ItemsDaoTsvBasedImpl() throws IOException {
         items = new ArrayList<Item>();
         try {
 

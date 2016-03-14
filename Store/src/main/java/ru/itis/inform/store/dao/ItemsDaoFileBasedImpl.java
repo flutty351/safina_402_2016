@@ -8,17 +8,20 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import org.apache.log4j.Logger;
+import org.springframework.stereotype.Component;
 import ru.itis.inform.store.dao.models.Item;
 
+
+@Component
 public class ItemsDaoFileBasedImpl implements ItemsDao {
 
     private static Logger log = Logger.getLogger(ItemsDaoFileBasedImpl.class.getName());
 
     BufferedReader bufferedReader;
     ArrayList<Item> items;
+    String filePath = "/home/aliya/IdeaProjects/reps/Store/src/main/resources/inputData/in.txt";
 
-
-    public ItemsDaoFileBasedImpl(String filePath) throws IOException {
+    public ItemsDaoFileBasedImpl() throws IOException {
         items = new ArrayList<>();
         bufferedReader = new BufferedReader(new FileReader(filePath));
         String line;
